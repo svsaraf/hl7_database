@@ -1,6 +1,6 @@
 # HL7 parser / analyzer.
 
-Built in 3 hours by Sanjay Saraf
+Built in 3.5 hours by Sanjay Saraf
 
 Installation instructions:
 
