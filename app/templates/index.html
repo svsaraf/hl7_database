@@ -3,6 +3,12 @@
 <title>Test page</title>
 </head>
 <body>
-Hello world.
+Hello world
+
+<form action ="/" method="post">
+{% csrf_token %}
+	<input id="hl7doc" type="text" name="hl7doc">
+	<input type="submit" value="SEND!">
+</form>
 </body>
 </html>
