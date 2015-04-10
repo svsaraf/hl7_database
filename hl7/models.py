@@ -30,3 +30,14 @@ class ComponentPV1(models.Model):
 class ComponentIN1(models.Model):
 	text = models.TextField()
 	doc = models.ForeignKey(Document)# Create your models here.
+
+class Record(models.Model):
+    msh_9 = models.TextField()
+    msh_10 = models.TextField()
+    msh_11 = models.TextField()
+    msh_12 = models.TextField()
+    pid_5 = models.TextField()
+    pid_11 = models.TextField()
+    evn_2 = models.TextField()
+    evn_4 = models.TextField()
+
