@@ -26,3 +26,7 @@ def index(request):
 	return render_to_response('index.html', {'records': records}, context)
 
 # Create your views here.
+def recordview(request, num):
+	context = RequestContext(request)
+	record = Record.objects.get(pk=num)
+	return render_to_response('recordview.html', {'record': record}, context)
