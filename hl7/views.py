@@ -10,10 +10,10 @@ def index(request):
 	if request.method=='POST':
 		text = request.POST['hl7doc']
 		doc = Document()
-		msh = ComponentMSH()
-		msh.doc = doc.docid
-		msh.text = text
 		doc.save()
+		msh = ComponentMSH()
+		msh.doc = doc
+		msh.text = text
 		msh.save()
 		return HttpResponseRedirect('/')
 	return render_to_response('index.html', {}, context)
