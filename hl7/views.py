@@ -14,13 +14,13 @@ def index(request):
 		doc.save()
 		msh = ComponentMSH()
 		msh.doc = doc
-		msh.text = message.msh.to_er7()
+		msh.text = message.msh.msh_2
 		pid = ComponentPID()
 		pid.doc = doc
-		pid.text = message.pid.to_er7()
+		pid.text = message.pid.pid_3
 		evn = ComponentEVN()
 		evn.doc = doc
-		evn.text = message.evn.to_er7()
+		evn.text = message.evn.evn_4
 		msh.save()
 		pid.save()
 		evn.save()
