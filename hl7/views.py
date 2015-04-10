@@ -12,18 +12,18 @@ def index(request):
 		message = parse_message(text)
 		doc = Document()
 		doc.save()
-		msh = ComponentMSH()
-		msh.doc = doc
-		msh.text = message.msh.msh_2
+		#msh = ComponentMSH()
+		#msh.doc = doc
+		#msh.text = message.msh.msh_2
 		pid = ComponentPID()
 		pid.doc = doc
 		pid.text = message.pid.pid_3
-		evn = ComponentEVN()
-		evn.doc = doc
-		evn.text = message.evn.evn_4
-		msh.save()
+		#evn = ComponentEVN()
+		#evn.doc = doc
+		#evn.text = message.evn.evn_4
+		#msh.save()
 		pid.save()
-		evn.save()
+		#evn.save()
 		return HttpResponseRedirect('/')
 	return render_to_response('index.html', {}, context)
 
