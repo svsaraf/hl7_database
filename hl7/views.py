@@ -23,6 +23,6 @@ def index(request):
 		return HttpResponseRedirect('/')
 
 	records = Record.objects.all()
-	return render_to_response('index.html', {records}, context)
+	return render_to_response('index.html', {'records': records}, context)
 
 # Create your views here.
