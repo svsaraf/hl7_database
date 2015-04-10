@@ -10,5 +10,6 @@ admin.site.register(ComponentPD1)
 admin.site.register(ComponentNK1)
 admin.site.register(ComponentPV1)
 admin.site.register(ComponentIN1)
+admin.site.register(Record)
 
 # Register your models here.

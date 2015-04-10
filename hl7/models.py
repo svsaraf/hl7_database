@@ -40,4 +40,8 @@ class Record(models.Model):
     pid_11 = models.TextField()
     evn_2 = models.TextField()
     evn_4 = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __unicode__(self):
+    	return u'Record created at %s' % (self.date_added)
 

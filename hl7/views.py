@@ -9,21 +9,17 @@ def index(request):
 	context = RequestContext(request)
 	if request.method=='POST':
 		text = request.POST['hl7doc']
-		message = parse_message(text)
-		doc = Document()
-		doc.save()
-		#msh = ComponentMSH()
-		#msh.doc = doc
-		#msh.text = message.msh.msh_2
-		pid = ComponentPID()
-		pid.doc = doc
-		pid.text = message.pid.pid_3
-		#evn = ComponentEVN()
-		#evn.doc = doc
-		#evn.text = message.evn.evn_4
-		#msh.save()
-		pid.save()
-		#evn.save()
+		message = parse_message(text,2,True)
+		r = Record()
+		r.msh_9 = message.msh.msh_9
+    	r.msh_10 = message.msh.msh_10
+    	r.msh_11 = message.msh.msh_11
+    	r.msh_12 = message.msh.msh_12
+    	r.pid_5 = message.pid.pid_5
+    	r.pid_11 = message.pid.pid_11
+        r.evn_2 = message.evn.evn_2
+    	r.evn_4 = message.evn.evn_4
+    	r.save()
 		return HttpResponseRedirect('/')
 	return render_to_response('index.html', {}, context)
 
