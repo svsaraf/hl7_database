@@ -1,16 +1,15 @@
 <html>
 <head>
-<title>Test page</title>
+<title>HL7 database</title>
 </head>
 <body>
-Hello world
-
+Throw an HL7 on this box and hit send.
 <form action ="/" method="post">
 {% csrf_token %}
 	<textarea id="hl7doc" type="text" name="hl7doc" style="width: 479px; height: 455px;"></textarea>
 	<input type="submit" value="SEND!">
 </form>
-
+Want to browse the database? Click <a href="/admin">here</a> to check it out.
 {% for record in records %}
 <p><a href="{{ record.pk }}">{{ record }}</a></p>
 {% endfor %}
