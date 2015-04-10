@@ -31,6 +31,7 @@ class ComponentIN1(models.Model):
 	text = models.TextField()
 	doc = models.ForeignKey(Document)# Create your models here.
 
+###All the above are defunct, ignore.
 class Record(models.Model):
     msh_9 = models.TextField()
     msh_10 = models.TextField()

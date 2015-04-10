@@ -10,5 +10,9 @@ Hello world
 	<textarea id="hl7doc" type="text" name="hl7doc" style="width: 479px; height: 455px;"></textarea>
 	<input type="submit" value="SEND!">
 </form>
+
+{% for record in records %}
+<p><a href="{{ record.pk }}">{{ record }}</a></p>
+{% endfor %}
 </body>
 </html>

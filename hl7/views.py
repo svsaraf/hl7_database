@@ -21,6 +21,8 @@ def index(request):
 		r.evn_4 = m.evn.evn_4.to_er7()
 		r.save()
 		return HttpResponseRedirect('/')
-	return render_to_response('index.html', {}, context)
+
+	records = Record.objects.all()
+	return render_to_response('index.html', {records}, context)
 
 # Create your views here.
