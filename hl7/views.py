@@ -18,9 +18,9 @@ def index(request):
     	r.pid_5 = message.pid.pid_5
     	r.pid_11 = message.pid.pid_11
         r.evn_2 = message.evn.evn_2
-    	r.evn_4 = message.evn.evn_4
-    	r.save()
-		return HttpResponseRedirect('/')
+        r.evn_4 = message.evn.evn_4
+        r.save()
+        return HttpResponseRedirect('/')
 	return render_to_response('index.html', {}, context)
 
 # Create your views here.
