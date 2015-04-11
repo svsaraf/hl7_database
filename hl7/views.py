@@ -3,6 +3,7 @@ from hl7.models import *
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse
+import hl7apy
 from hl7apy.parser import parse_message
 
 def index(request):

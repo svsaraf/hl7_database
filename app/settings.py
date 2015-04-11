@@ -88,6 +88,19 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+import socket
+if socket.gethostname()=='Sanjay-Sarafs-MacBook-Pro.local':
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sanjay',
+        'USER': 'sanjay',
+        'PASSWORD': 'sanjay90',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
